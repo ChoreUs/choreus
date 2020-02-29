@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'timer.dart';
+
 class TimersPage extends StatefulWidget {
   TimersPage({Key key, this.title}) : super(key: key);
 
@@ -22,7 +24,10 @@ class _TimersPageState extends State<TimersPage> {
           mainAxisSpacing: 10,
           crossAxisCount: 2,
           children: <Widget>[
-            
+            Timer(symbol: Icons.computer),
+            Timer(symbol: Icons.delete),
+            Timer(symbol: Icons.drive_eta),
+            Timer(symbol: Icons.event_seat),
           ]
         )
       );
