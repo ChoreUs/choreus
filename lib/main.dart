@@ -16,15 +16,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: "Home"),
@@ -35,15 +26,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
@@ -51,18 +33,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // int _counter = 0;
-
-  // void _incrementCounter() {
-  //   setState(() {
-  //     // This call to setState tells the Flutter framework that something has
-  //     // changed in this State, which causes it to rerun the build method below
-  //     // so that the display can reflect the updated values. If we changed
-  //     // _counter without calling setState(), then the build method would not be
-  //     // called again, and so nothing would appear to happen.
-  //     _counter++;
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -74,19 +44,19 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           body: TabBarView(
             children: [
-              Text("Hi"),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
-              Icon(Icons.directions_bike),
+              NewsPage(title:"News"),
+              ChoresPage(title:"Chores"),
+              TimersPage(title:"Timers"),
+              CalendarPage(title:"Calendar"),
             ],
           ),
           bottomNavigationBar: Container(
             child: TabBar(
               tabs: [
-                Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_transit)),
-                Tab(icon: Icon(Icons.directions_bike)),
-                Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.notifications)),
+                Tab(icon: Icon(Icons.work)),
+                Tab(icon: Icon(Icons.av_timer)),
+                Tab(icon: Icon(Icons.calendar_today)),
               ],
               indicatorColor: Colors.white,
             ),
@@ -94,68 +64,5 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       );
-
-
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    // return Scaffold(
-    //   appBar: AppBar(
-    //     // Here we take the value from the MyHomePage object that was created by
-    //     // the App.build method, and use it to set our appbar title.
-    //     title: Text(widget.title),
-    //   ),
-    //   body:
-    //   // body: Center(
-    //     // child: Column(
-    //     //   mainAxisAlignment: MainAxisAlignment.center,
-    //     //   children: <Widget>[
-    //         // Text(
-    //         //   'You have pushed the button this many times:',
-    //         // ),
-    //         // Text(
-    //         //   '$_counter',
-    //         //   style: Theme.of(context).textTheme.display1,
-    //         // ),
-    //         TabBarView(
-    //           children: <Widget>[
-    //             Tab(icon: Icon(Icons.directions_car)),
-    //             Tab(icon: Icon(Icons.directions_car)),
-    //             Tab(icon: Icon(Icons.directions_car)),
-    //             Tab(icon: Icon(Icons.directions_car)),]),
-    //           // NewsPage(),
-    //           // new Container(
-    //           //   color: Colors.orange,
-    //           // ),
-    //           // new Container(
-    //           //   color: Colors.lightGreen,
-    //           // ),
-    //           // new Container(
-    //           //   color: Colors.red,
-    //           // ),
-    //       //   ],
-    //   bottomNavigationBar: new TabBar(
-    //       tabs: [
-    //         Tab(
-    //           icon: new Icon(Icons.home),
-    //         ),
-    //         Tab(
-    //           icon: new Icon(Icons.rss_feed),
-    //         ),
-    //         Tab(
-    //           icon: new Icon(Icons.perm_identity),
-    //         ),
-    //         Tab(icon: new Icon(Icons.settings),)
-    //       ],
-    //       labelColor: Colors.yellow,
-    //       unselectedLabelColor: Colors.green,
-    //       indicatorSize: TabBarIndicatorSize.label,
-    //       indicatorPadding: EdgeInsets.all(5.0),
-    //       indicatorColor: Colors.red,
-    //       ),
-    //   );
   }
 }

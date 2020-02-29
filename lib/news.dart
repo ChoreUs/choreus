@@ -14,11 +14,8 @@ class _NewsPageState extends State<NewsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Text(widget.title);
-    // return Scaffold(
-    //   body: Center(
-    //     child: Text(widget.title)
-    //   ),
-    // );
+    return Center(
+         child: Text(widget.title)
+    );
   }
 }

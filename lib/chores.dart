@@ -14,11 +14,8 @@ class _ChoresPageState extends State<ChoresPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Chores");
-    // return Scaffold(
-    //   body: Center(
-    //     child: Text(widget.title)
-    //   ),
-    // );
+    return Center(
+      child: Text(widget.title)
+    );
   }
 }
