@@ -1,6 +1,9 @@
-# choreus
+# SWE_project-name-tba
 
-A new Flutter project.
+[![Build Status](https://travis-ci.org/choreus/choreus.svg?branch=master)](https://travis-ci.org/choreus/choreus)
+[![codecov](https://codecov.io/gh/choreus/choreus/branch/master/graph/badge.svg)](https://codecov.io/gh/choreus/choreus)
+
+This is the default flutter project
 
 ## Getting Started
 
